@@ -1,0 +1,158 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+	<title>index</title>
+	<link rel="stylesheet" href="bootstrap-4.3.1-dist/css/bootstrap.css">
+	<link rel="stylesheet" href="css/index.css">
+	<script src="js/jquery-3.4.1.min.js"></script>
+	<script src="bootstrap-4.3.1-dist/js/bootstrap.js"></script>
+	<script src="js/Animation.js"></script>
+	<script>
+		window.onscroll = function(){
+			var oDiv = document.getElementById('sidebar');
+			var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+			var target = parseInt((document.documentElement.clientHeight-oDiv.offsetHeight)/2+scrollTop);
+			if(scrollTop < 50)
+			{
+				oDiv.style.display = 'none';
+			}
+			else
+			{
+				oDiv.style.display = 'block';
+				startMove(oDiv, {top:target});//侧边栏滑动效果
+			}
+		
+			var t = scrollTop;
+			var main_2_img = document.getElementById('main_2_img');
+			var main_2_intro = document.getElementById('main_2_intro');
+			var main_works = document.getElementById('main_works')
+			var main_1_intro = document.getElementById('main_1_intro');
+			var main_1_intro_width = document.getElementById('main_1_intro').offsetWidth;
+			if(t > 500){
+				var target = main_1_intro_width + 120;
+				startMove(main_1_intro, {left:60},startMove(main_works, {left: target}));
+			}
+			if(t > 900){
+				startMove(main_2_img, {left:50}, startMove(main_2_intro, {left:500}));	
+			}
+		};
+
+		var text=new Array(); //定义需要显示的数组
+		text[0]="我们会去收集目前的知名同人动画<br>也会去整理其它优秀的同人创作MMD，MAD或是个人动画<br>也会对这些动画进行实时更新<br>如果官方发布动画<br>我们也将第一时间进行整合并写一个专门页面";
+		text[1]="官方连载漫画是主要内容，本站将实时更新<br>我们也将不定时的更新官方画师的Twitter动态<br>此外还有各类同人作品我们也将分类整理并发布<br>国内知名喵玉汉化组已和本站达成协议<br>汉化作品将在喵玉殿和本站同时更新";
+		text[2]="本站将提供官方作品的正版购买链接和一些整合资源<br>同时本站将会收录其它在网络上发布的东方同人游戏";
+
+		function show(idx){
+			var intro_text = document.getElementById('main_2_intro_text');
+			document.getElementById('main_2_intro_text').innerHTML=text[idx];
+		}
+    </script>
+</head>
+
+<body>
+	<div id="account_menu" class="nv" onMouseOver="displayMenu()" onMouseOut="hideMenu()">
+		<ul>
+			<li><a href="index.html">注 册</a></li>
+			<li><a href="login.html">登 入</a></li>
+		</ul>
+		<div id="account_icon">
+		</div>
+		<div id="account_icon_blur">
+		</div>
+		<div id="stat"><a>未 登 入</a></div>
+	</div>
+	<div id="menubar" class="nv">
+	<ul>
+		<li><a href="index.html">首 页</a></li>
+		<li><a href="anime.html">动 画</a></li>
+		<li><a href="comic.html">漫 画</a></li>
+		<li><a href="game.html">游 戏</a></li>
+		<li><a href="">支 持 我 们</a></li>
+		<li class="account"><a  onMouseOver="displayMenu()" onMouseOut="hideMenu()" href="">用 户</a></li>
+	</ul>
+	</div>	
+	<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+  		<ol class="carousel-indicators">
+    		<li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+    		<li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+    		<li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+  		</ol>
+  	<div class="carousel-inner">
+    	<div class="carousel-item active">
+      		<center><img src="img/index_carousel_1.jpg" alt="..."></center>
+			<div class="carousel-caption d-none d-md-block">
+          		<h1>欢迎来到TOUHOU STATION</h1>
+          		<p>致力于打造最好的线上欣赏东方的体验</p>
+        	</div>
+    	</div>
+    	<div class="carousel-item">
+    		<center><img src="img/Konachan.com - 283347 flandre_scarlet.jpg" alt="..."></center>
+			<div class="carousel-caption d-none d-md-block">
+          		<h1>打造活跃社区激发讨论兴趣</h1>
+          		<p>为各位东方众带来最好的评分板块</p>
+        	</div>
+    	</div>
+    	<div class="carousel-item">
+      		<center><img src="img/60181142_p0.jpg" alt="..."></center>
+			<div class="carousel-caption d-none d-md-block">
+          		<h1>提供最快的东方资源更新速度</h1>
+          		<p>与知名汉化组喵玉汉化组等团体合作</p>
+        	</div>
+    	</div>
+  	</div>
+  	<a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+    	<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    	<span class="sr-only">Previous</span>
+  	</a>
+  	<a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+    	<span class="carousel-control-next-icon" aria-hidden="true"></span>
+    	<span class="sr-only">Next</span>
+  	</a>
+	</div>
+	<div id="sidebar">
+	<ul>
+		<li><a href="index.html">首   页</a></li>
+		<li><a href="anime.html">动   画</a></li>
+		<li><a href="comic.html">漫   画</a></li>
+		<li><a href="game.html">游   戏</a></li>
+		<li onClick="backTop()"><a>回到顶部</a></li>
+	</ul>
+	</div>
+	
+	<div id="main_1">
+		<div id="main_1_intro">
+			<p style="font-size: 5vw">东方Project简介</p>
+			<p style="font-size: 1.8vw">欢 迎 来 到 幻 想 的 世 界</p>
+			<p style="font-style: italic">东方project是一系列由 太田顺也 (ZUN) 设计的STG(Shooting Game)竖版卷轴弹幕射击游戏<br>
+				 因其出色的游戏性，精美的弹幕设计，漂亮的人物立绘和丰富的背景设定<br>
+				 而吸引了大量世界各地的玩家并积累大量粉丝，至今已有17余载<br>
+				 其二次创作作品不计其数...<br>
+				 其右图为2006年8月发布的系列第一作和2019年的最新一作 东方红魔乡 和 东方鬼形兽</p>
+				 <div class="Btn"><a href="https://thwiki.cc/">了解更多</a></div>
+		</div>
+		<div id="main_works">
+			<img id="main_works_1" src="img/work/东方红魔乡封面.jpg" alt="东方红魔乡封面.jpg">
+			<img id="main_works_2" src="img/work/东方鬼形兽封面.jpg" alt="东方鬼形兽封面.jpg">
+		</div>
+	</div>
+	<div id="main_2">
+		<div id="main_2_img"><img src="img/48-1Q015101921164.png" alt="..."></div>
+		<div id="main_2_intro">
+				<p style="font-size: 5vw">本站目标</p>
+				<p style="font-size: 1.8vw">本 站 致 力 于 收 集 整 合 网 络 东 方 资 源</p>
+				<span id="main_2_intro_text" style="font-style: italic">由于东方的特殊性，作品数量成千上万，质量良莠不齐，<br>
+				  本站会尽力去收集网络上的东方二次创作并整合评级分类，<br>
+				  以给各位提供一个良好了解东方的地方</span>
+			<div>
+				<div class="Btn1" onClick="show(0)"><a href="https://thwiki.cc/">关于动画</a></div>
+				<div class="Btn1" onClick="show(1)"><a href="https://thwiki.cc/">关于漫画</a></div>
+				<div class="Btn1" onClick="show(2)"><a href="https://thwiki.cc/">关于游戏</a></div>
+			</div>
+		</div>
+	</div>
+	<div id="end">
+		<p>Powered By DarckLH<br>rmdarck18@gmail.com<br>From 2019</p>
+	</div>
+</body>
+</html>

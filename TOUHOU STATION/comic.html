@@ -1,0 +1,174 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>comic</title>
+<link rel="stylesheet" href="bootstrap-4.3.1-dist/css/bootstrap.css">
+<link rel="stylesheet" href="css/index.css">
+<link rel="stylesheet" href="css/comic.css">
+<script src="js/jquery-3.4.1.min.js"></script>
+<script src="bootstrap-4.3.1-dist/js/bootstrap.js"></script>
+<script src="js/Animation.js"></script>
+<script>
+	window.onscroll = function(){
+		var oDiv = document.getElementById('sidebar');
+		var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+		var target = parseInt((document.documentElement.clientHeight-oDiv.offsetHeight)/2+scrollTop);
+
+		if(scrollTop < 50)
+		{
+			oDiv.style.display = 'none';
+		}
+		else
+		{
+			oDiv.style.display = 'block';
+			startMove(oDiv, {top:target});//侧边栏滑动效果
+		}
+};
+	var text=new Array(); //定义需要显示的数组
+	
+	text[0] = "官方漫画";
+	text[1] = "官方出版物";
+	text[2] = "同人漫画";
+</script>
+</head>
+
+<body>
+	<div id="account_menu" class="nv" onMouseOver="displayMenu()" onMouseOut="hideMenu()">
+		<ul>
+			<li><a href="index.html">注 册</a></li>
+			<li><a href="login.html">登 入</a></li>
+		</ul>
+		<div id="account_icon">
+		</div>
+		<div id="account_icon_blur">
+		</div>
+		<div id="stat"><a>未 登 入</a></div>
+	</div>
+
+	<div id="menubar" class="nv">
+	<ul>
+		<li><a href="index.html">首 页</a></li>
+		<li><a href="anime.html">动 画</a></li>
+		<li><a href="comic.html">漫 画</a></li>
+		<li><a href="game.html">游 戏</a></li>
+		<li><a href="">支 持 我 们</a></li>
+		<li class="account"><a  onMouseOver="displayMenu()" onMouseOut="hideMenu()" href="">用 户</a></li>
+	</ul>
+	</div>
+  	<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+  		<ol class="carousel-indicators">
+    		<li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+    		<li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+    		<li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+  		</ol>
+  	<div class="carousel-inner">
+    	<div class="carousel-item active">
+      		<center><img src="img/index_carousel_1.jpg" alt="..."></center>
+			<div class="carousel-caption d-none d-md-block">
+          		<h1>欢迎来到TOUHOU STATION</h1>
+          		<p>致力于打造最好的线上欣赏东方的体验</p>
+        	</div>
+    	</div>
+    	<div class="carousel-item">
+    		<center><img src="img/Konachan.com - 283347 flandre_scarlet.jpg" alt="..."></center>
+			<div class="carousel-caption d-none d-md-block">
+          		<h1>打造活跃社区激发讨论兴趣</h1>
+          		<p>为各位东方众带来最好的评分板块</p>
+        	</div>
+    	</div>
+    	<div class="carousel-item">
+      		<center><img src="img/60181142_p0.jpg" alt="..."></center>
+			<div class="carousel-caption d-none d-md-block">
+          		<h1>提供最快的东方资源更新速度</h1>
+          		<p>与知名汉化组喵玉汉化组等团体合作</p>
+        	</div>
+    	</div>
+  	</div>
+  	<a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+    	<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    	<span class="sr-only">Previous</span>
+  	</a>
+  	<a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+    	<span class="carousel-control-next-icon" aria-hidden="true"></span>
+    	<span class="sr-only">Next</span>
+  	</a>
+	</div>
+	<div id="sidebar">
+	<ul>
+		<li><a href="index.html">首   页</a></li>
+		<li><a href="anime.html">动   画</a></li>
+		<li><a href="comic.html">漫   画</a></li>
+		<li><a href="game.html">游   戏</a></li>
+		<li onClick="backTop()"><a>回到顶部</a></li>
+	</ul>
+	</div>
+	<div id="content1" class="content">
+		<p class="content_text" style="margin-left: 4vw; font-size: 40px">官方漫画</p>
+		<div class="tab_content">
+			<ul>
+				<li onClick = "show(0)"><a>官方漫画</a></li>
+				<li onClick = "show(1)"><a>官方出版物</a></li>
+				<li onClick = "show(2)"><a>同人漫画</a></li>
+			</ul>
+		</div>
+		<ul>
+			<li><div class="anime_info">
+					<img src="img/work/东方三月精E封面.jpg" alt="...">
+					<div class="anime_intro">
+						<a href="" style="font-size: 30px">东方三月精 ～ Eastern and Little Nature Deity.</a>
+						<p>官方漫画东方三月精的第一部（共四部）<br>由ZUN编剧、松倉ねむ作画。该漫画从2005年3月起开始在角川旗下的杂志コンプエース（Comp-Ace）上连载，并于2006年5月结束连载。</p>
+					</div></div></li>
+			<li><div class="anime_info">
+					<img src="img/work/东方茨歌仙封面.jpg" alt="...">
+					<div class="anime_intro">
+						<a href="" style="font-size: 30px">东方茨歌仙 ～ Wild and Horned Hermit.</a>
+						<p>東方茨歌仙 ～ Wild and Horned Hermit.（とうほういばらかせん，Touhou Ibarakasen）<br>
+							由ZUN编剧，あずまあや作画的官方漫画。该漫画从2010年7月24日开始在杂志《キャラ☆メル Febri》上开始连载。<br>
+							围绕着本漫画的主角茨木华扇讲述发生在幻想乡里的故事。</p>
+					</div></div></li>
+		</ul>
+	</div>
+	<div id="content2" class="hidden">
+		<p class="content_text" style="margin-left: 4vw; font-size: 40px">官方出版物</p>
+		<div class="tab_content">
+			<ul>
+				<li onClick = "show(0)"><a>官方漫画</a></li>
+				<li onClick = "show(1)"><a>官方出版物</a></li>
+				<li onClick = "show(2)"><a>同人漫画</a></li>
+			</ul>
+		</div>
+		<ul>
+			<li><div class="anime_info">
+					<img src="img/work/东方求闻口授封面.jpg" alt="...">
+					<div class="anime_intro">
+						<a href="" style="font-size: 30px">东方求闻口授 ～ Symposium of Post-mysticism.</a>
+						<p>東方求聞口授 ～ Symposium of Post-mysticism.（とうほうぐもんくじゅ，Touhou Gumon Kuju）<br>
+							本书是东方Project的第二本官方设定集，以多种形式介绍了幻想乡当前的宗教格局以及风神录到神灵庙的角色。</p>
+					</div></div></li>
+		</ul>
+	</div>
+	<div id="content3" class="hidden">
+		<p class="content_text" style="margin-left: 4vw; font-size: 40px">同人漫画</p>
+		<div class="tab_content">
+			<ul>
+				<li onClick = "show(0)"><a>官方漫画</a></li>
+				<li onClick = "show(1)"><a>官方出版物</a></li>
+				<li onClick = "show(2)"><a>同人漫画</a></li>
+			</ul>
+		</div>
+		<ul>
+			<li><div class="anime_info">
+					<img src="img/work/BACK_TO_THE_科学世紀封面.jpg" alt="...">
+					<div class="anime_intro">
+						<a href="" style="font-size: 30px">	BACK TO THE 科学世紀</a>
+						<p>发行商:ぜのさいど<br>发行地:日本<br>简介:无具体信息<br>发行日期:2018年8月10日</p>
+					</div></div></li>
+		</ul>
+	</div>
+	<div id="content4" class="hidden"></div>
+	<div id="end">
+		<p>Powered By DarckLH<br>rmdarck18@gmail.com<br>From 2019</p>
+	</div>
+</body>
+</html>

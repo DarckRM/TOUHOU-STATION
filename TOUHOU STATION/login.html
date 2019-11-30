@@ -1,0 +1,170 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>login</title>
+	<link rel="stylesheet" href="bootstrap-4.3.1-dist/css/bootstrap.css">
+	<link rel="stylesheet" href="css/index.css">
+	<script src="js/jquery-3.4.1.min.js"></script>
+	<script src="bootstrap-4.3.1-dist/js/bootstrap.js"></script>
+	<script src="js/Animation.js"></script>
+	<style>
+		#login_form
+		{
+			position: relative;
+			background: rgba(247,170,170,1.00);
+			width: 500px;
+			height: 450px;
+			margin: 80px auto 200px auto;
+			border-radius: 5%;
+			box-shadow: 6px 6px 15px 1px rgba(124,50,50,0.79);
+			opacity: 0.9;
+			text-align: center;
+			color: white;
+			padding-top: 40px;
+			z-index: 2;
+		}
+		#login_form hr
+		{
+			width: 80%;
+			margin: 0 auto;
+		}
+		#CPW
+		{
+			position: absolute;
+			z-index: 1;
+			left: 80px;
+			top: 210px;
+			display: none;
+		}
+		.login_form_texting
+		{
+			position: relative;
+			margin: 70px auto;
+			font-size: 19px;
+			letter-spacing: 5px;
+		}
+		.login_form_texting input
+		{
+			outline-style: none;
+			border: 1px solid #ccc;
+			border-radius: 25px;
+			padding: 8px 5px;
+			font-size: 20px;
+		}
+		.login_form_texting input:focus
+		{
+			box-shadow: 2px 2px 9px 4px rgba(160,86,88,0.6);
+		}
+		.content
+		{
+			padding-top: 90px;
+			border-radius: 2%;
+			background: url("img/login_background1.jpg");
+			background-color: white;
+			background-repeat: no-repeat;
+			background-position: center;
+			background-position: center;
+		}
+		#login_background
+		{
+			background-color: white;
+			background-repeat: no-repeat;
+			background-position: center;
+		}
+		.CCbtn
+		{
+			z-index: 2;
+			position: absolute;
+			right: 20px;
+			bottom: -55px;
+			background: rgba(255,248,248,1.00);
+			width: 120px;
+			height: 120px;
+			border-radius: 55%;
+			transition: transform 0.2s ease-in 0.2s;
+			boxShadow: 2px 2px 9px 4px rgba(185,114,115,0.66);
+		}
+		.CCbtn:hover
+		{
+			transform: scale(1.16, 1.16);
+		} 	
+		#confirm
+		{
+	
+			background: url("img/成功.jpg");
+			background-size: 120px 120px;
+		}
+		#cancel
+		{
+			z-index: 1;
+			background: url("img/失败.jpg");
+			border-radius: 50;
+			background-size: 120px 120px;
+		}
+		#cancel:hover
+		{
+			border-radius: 50%;
+		}
+		#reg
+		{
+			z-index: 1;
+			border-radius: 50;
+			background: url("img/增加.jpg");
+			background-size: 120px 120px;
+		}
+		#reg:hover
+		{
+			border-radius: 50%;
+		}
+	</style>
+</head>
+
+<body id="body">
+	<div id="account_menu" class="nv" onMouseOver="displayMenu()" onMouseOut="hideMenu()">
+		<ul>
+			<li><a href="login.html">注 册</a></li>
+			<li><a href="login.html">登 入</a></li>
+		</ul>
+		<div id="account_icon">
+		</div>
+		<div id="account_icon_blur">
+		</div>
+		<div id="stat"><a>未 登 入</a></div>
+	</div>
+	<div id="menubar" class="nv">
+	<ul>
+		<li><a href="index.html">首 页</a></li>
+		<li><a href="anime.html">动 画</a></li>
+		<li><a href="comic.html">漫 画</a></li>
+		<li><a href="game.html">游 戏</a></li>
+		<li><a href="">支 持 我 们</a></li>
+		<li class="account"><a  onMouseOver="displayMenu()" onMouseOut="hideMenu()" href="">用 户</a></li>
+	</ul>
+	</div>
+	<div id="login_background" class="content">
+		<div id="login_form">
+			<h1 id="title">登 入</h1>
+			<hr>
+			<div id="UN" class="login_form_texting">
+				用户名 <input type="text" placeholder="请输入您的用户名">
+			</div>
+			<div id="PW" class="login_form_texting">
+				密&nbsp;&nbsp;&nbsp;码 <input type="text" placeholder="请输入您的密码">
+			</div>
+			<div id="CPW" class="login_form_texting">
+				确认密码<input type="text" placeholder="请确认您的密码">
+			</div>
+				<div id="confirm" class="CCbtn" onMouseOver="startMove(reg,{right:160})" onMouseOut="startMove(reg,{right:20})">
+				</div>
+				<div id="reg" class="CCbtn" onMouseOver="startMove(reg,{right:160})" onMouseOut="startMove(reg,{right:20})" onClick="Switch()">
+				</div>
+
+		</div>
+
+	</div>
+	<div id="end">
+		<p>Powered By DarckLH<br>rmdarck18@gmail.com<br>From 2019</p>
+	</div>
+</body>
+</html>

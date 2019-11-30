@@ -1,0 +1,184 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>anime</title>
+<link rel="stylesheet" href="bootstrap-4.3.1-dist/css/bootstrap.css">
+<link rel="stylesheet" href="css/index.css">
+<link rel="stylesheet" href="css/anime.css">
+<script src="js/jquery-3.4.1.min.js"></script>
+<script src="bootstrap-4.3.1-dist/js/bootstrap.js"></script>
+<script src="js/Animation.js"></script>
+<script>
+	window.onscroll = function(){
+		var oDiv = document.getElementById('sidebar');
+		var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+		var target = parseInt((document.documentElement.clientHeight-oDiv.offsetHeight)/2+scrollTop);
+
+		if(scrollTop < 50)
+		{
+			oDiv.style.display = 'none';
+		}
+		else
+		{
+			oDiv.style.display = 'block';
+			startMove(oDiv, {top:target});//侧边栏滑动效果
+		}
+	}
+		var text=new Array(); //定义需要显示的数组
+		
+		text[0]="官方动画";
+		text[1]="同人动画";
+		text[2]="MMD";
+		text[3]="MAD"
+</script>
+</head>
+
+<body>
+	<div id="account_menu" class="nv" onMouseOver="displayMenu()" onMouseOut="hideMenu()">
+		<ul>
+			<li><a href="index.html">注 册</a></li>
+			<li><a href="login.html">登 入</a></li>
+		</ul>
+		<div id="account_icon">
+		</div>
+		<div id="account_icon_blur">
+		</div>
+		<div id="stat"><a>未 登 入</a></div>
+	</div>
+	<div id="menubar" class="nv">
+	<ul>
+		<li><a href="index.html">首 页</a></li>
+		<li><a href="anime.html">动 画</a></li>
+		<li><a href="comic.html">漫 画</a></li>
+		<li><a href="game.html">游 戏</a></li>
+		<li><a href="">支 持 我 们</a></li>
+		<li class="account"><a  onMouseOver="displayMenu()" onMouseOut="hideMenu()" href="">用 户</a></li>
+	</ul>
+	</div>
+		<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+  		<ol class="carousel-indicators">
+    		<li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+    		<li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+    		<li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+  		</ol>
+  	<div class="carousel-inner">
+    	<div class="carousel-item active">
+      		<center><img src="img/anime_carousel_1.jpg" alt="..."></center>
+			<div class="carousel-caption d-none d-md-block">
+          		<h1>秘封活动记录:祝</h1>
+          		<p>秘封二人的故事展开了新的篇章,这次是关于早苗的事情...</p>
+        	</div>
+    	</div>
+    	<div class="carousel-item">
+    		<center><img src="img/anime_carousel_2.jpg" alt="..."></center>
+			<div class="carousel-caption d-none d-md-block">
+          		<h1>梦想夏乡</h1>
+          		<p>伊吹萃香—小小的百鬼夜行</p>
+        	</div>
+    	</div>
+    	<div class="carousel-item">
+      		<center><img src="img/anime_carousel_3.jpg" alt="..."></center>
+			<div class="carousel-caption d-none d-md-block">
+          		<h1>幻想万华镜 - 花开艳丽终散落</h1>
+          		<p>春雪异变之章</p>
+        	</div>
+    	</div>
+  	</div>
+  	<a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+    	<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    	<span class="sr-only">Previous</span>
+  	</a>
+  	<a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+    	<span class="carousel-control-next-icon" aria-hidden="true"></span>
+    	<span class="sr-only">Next</span>
+  	</a>
+	</div>
+	<div id="sidebar">
+	<ul>
+		<li><a href="index.html">首   页</a></li>
+		<li><a href="anime.html">动   画</a></li>
+		<li><a href="comic.html">漫   画</a></li>
+		<li><a href="game.html">游   戏</a></li>
+		<li onClick="backTop()"><a>回到顶部</a></li>
+	</ul>
+	</div>
+	<div id="content2" class="content">
+		<p class="content_text" style="margin-left: 4vw; font-size: 40px">同人作品</p>
+		<div class="tab_content">
+			<ul>
+				<li onClick = "show(0)"><a>官方动画</a></li>
+				<li onClick = "show(1)"><a>同人动画</a></li>
+				<li onClick = "show(2)"><a>MMD</a></li>
+				<li onClick = "show(3)"><a>MAD</a></li>
+			</ul>
+		</div>
+		<ul>
+			<li><div class="anime_info">
+					<img src="img/work/cover.jpg" alt="...">
+					<div class="anime_intro">
+						<a href="" style="font-size: 30px">秘封活动记录:祝</a>
+						<p>发行商:京都幻想剧团<br>发行地:中国<br>故事简介:　「秘封活动记录」以梅莉和莲子的视角，展现幻想乡过去的故事。由各位观众<br>与秘封俱乐部的二人一同探究幻想乡隐秘的历史谜团。<br>而这回的第2话-祝-是基于东方官方游戏「东方风神录」的设定所展开的故事。</p>
+					</div>	
+				</div></li>
+			<li><div class="anime_info">
+					<img src="img/MKDV-0901_001.jpg" alt="...">
+					<div class="anime_intro">
+						<a href="" style="font-size: 30px">梦想夏乡</a>
+						<p>发行商:舞风<br>发行地:日本<br>简介:《梦想夏乡》（日语：夢想夏郷 -A Summer Day's Dream-）<br>是由日本同人社团舞风自2008年起制作的东方project同人动画。目前已更新至3话「开绽的既视感」，预定4话完结</p>
+					</div></div></li>
+			<li><div class="anime_info">
+					<img src="img/The_Memories_Of_Phantasm.jpg" alt="...">
+					<div class="anime_intro">
+						<a href="" style="font-size: 30px">幻想万华镜</a>
+						<p>发行商:满福神社<br>发行地:日本<br>简介:《幻想万华镜》（日语：「幻想万華鏡 ～The Memories Of Phantasm～」）<br>是由日本同人社团满福神社（満福神社）自2010年起制作的东方Project的同人动画系列。<br>其音乐由同人社团幽闭星光（幽閉サテライト）负责制作</p>
+					</div></div></li>
+		</ul>
+	</div>
+	<div id="content1" class="hidden">
+		<p class="content_text" style="margin-left: 4vw; font-size: 40px">官方作品</p>
+		<div class="tab_content">
+			<ul>
+				<li onClick = "show(0)"><a>官方动画</a></li>
+				<li onClick = "show(1)"><a>同人动画</a></li>
+				<li onClick = "show(2)"><a>MMD</a></li>
+				<li onClick = "show(3)"><a>MAD</a></li>
+			</ul>
+		</div>
+		<ul>
+			<li><div class="anime_info">
+					<img src="img/work/cover.jpg" alt="...">
+					<div class="anime_intro">
+						<a href="" style="font-size: 30px">秘封活动记录:祝</a>
+						<p>发行商:京都幻想剧团<br>发行地:中国<br>故事简介:阿萨德撒多撒撒奥所所大所<br>大所多撒奥所撒大所多</p>
+					</div>	
+				</div></li>
+		</ul>
+	</div>
+	<div id="content3" class="hidden">
+		<p class="content_text" style="margin-left: 4vw; font-size: 40px">MMD作品</p>
+		<div class="tab_content">
+			<ul>
+				<li onClick = "show(0)"><a>官方动画</a></li>
+				<li onClick = "show(1)"><a>同人动画</a></li>
+				<li onClick = "show(2)"><a>MMD</a></li>
+				<li onClick = "show(3)"><a>MAD</a></li>
+			</ul>
+		</div>
+	</div>
+	<div id="content4" class="hidden">
+		<p class="content_text" style="margin-left: 4vw; font-size: 40px">MAD作品</p>
+		<div class="tab_content">
+			<ul>
+				<li onClick = "show(0)"><a>官方动画</a></li>
+				<li onClick = "show(1)"><a>同人动画</a></li>
+				<li onClick = "show(2)"><a>MMD</a></li>
+				<li onClick = "show(3)"><a>MAD</a></li>
+			</ul>
+		</div>
+	</div>
+	<div id="end">
+		<p>Powered By DarckLH<br>rmdarck18@gmail.com<br>From 2019</p>
+	</div>
+</body>
+</html>

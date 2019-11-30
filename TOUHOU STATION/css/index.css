@@ -1,0 +1,417 @@
+@charset "utf-8";
+/* CSS Document */
+*
+{
+	margin: 0;
+	padding: 0;
+}
+a
+{
+	text-decoration: none;
+}
+a:hover
+{
+	text-decoration: none;
+}
+ul
+{
+	list-style-type: none;
+}
+body
+{
+	background:rgba(213,68,70,1.00);
+}
+.nv
+{
+	position: relative;
+	background: rgba(51,51,51,1.00);
+	box-shadow: 10px 10px 26px 13px rgba(21,23,25,0.80);
+	width: 100%;
+	z-index: 2;
+}
+.nv ul
+{
+	padding: 0;
+	margin: 0;
+	height: 60px;
+	width: auto;
+	overflow: hidden;
+}
+.nv li{
+	float: left;
+}
+.nv li a
+{
+	height: 60px;
+	line-height: 30px;
+	display: block;
+	color: white;
+	text-align: center;
+	padding: 14px 25px;
+}
+.nv li a:hover
+{
+	background: rgba(67,67,67,1.00);
+}
+.account
+{
+	position: absolute;
+	right: 18px;
+	color: white;
+}
+#account_menu
+{
+	position: absolute;
+	right: 18px;
+	z-index: 2;
+	top: -300px;
+	width: 200px;
+	height: 320px;
+}
+#account_menu li
+{
+	margin: 5px 5px;
+	float: right;
+}
+#account_icon
+{
+	position: absolute;
+	z-index: 3;
+	left: 20px;
+	margin: 15px auto;
+	background: url("../img/avatar.jpg");
+	background-size:180px;
+	width: 160px;
+	height: 160px;
+	border-radius: 50%;
+	background-position: center;
+}
+#account_icon_blur
+{
+	position: absolute;
+	z-index: 2;
+	left: 17px;
+	margin: 15px auto;
+	background: url("../img/avatar.jpg");
+	background-size:180px;
+	width: 160px;
+	height: 160px;
+	border-radius: 50%;
+	background-position: center;
+	filter: blur(10px) brightness(70%) opacity(0.6);
+}
+#stat
+{
+	position: absolute;
+	width: 160px;
+	left: 20px;
+	text-align: center;
+	color: white;
+	bottom: 40px;
+}
+.carousel-caption
+{
+	font-size: 26px;
+}
+.carousel-inner
+{
+	position: relative;
+	box-shadow: 0px 10px 60px 13px rgba(55,49,49,0.71);
+	margin-bottom: 60px;
+}
+.carousel-inner img
+{
+	min-width: 720px;
+	width: 100%;
+	box-shadow: 0px 10px 26px 13px #888888;
+	filter: brightness(0.6);
+}
+#main_1
+{
+	position: relative;
+	z-index: 2;
+	width: 100%;
+	height: 600px;
+	box-shadow: 0px 10px 60px 13px rgba(55,49,49,0.71);
+	padding-top: 40px;
+	padding-bottom: 40px;
+	padding-left: 20px;
+	margin-bottom: 70px;
+	background: rgba(255,255,255,1.00);
+}
+#main_works
+{
+	position: absolute;
+	width: auto;
+	height: 80%;
+	top: 50px;
+	overflow: hidden;
+	z-index: 2;
+}
+#main_works img
+{
+	float: left;
+	box-shadow: 10px 10px 20px 6px #888888;
+	display: block;
+	margin: 20px 45px 10px 20px;
+	min-width: 180px;
+	transition: transform 0.2s ease-in 0.2s;
+	width: 16vw;
+	overflow: hidden;
+}
+#main_works img:hover
+{
+	transform: scale(1.1, 1.1);
+}
+#main_1_intro
+{  
+	position: absolute;
+	max-height: 570px;
+	min-width: 400px;
+	height: auto;
+	left: -300px;
+	width: 40%;
+	padding-left: 20px;
+	padding-bottom: 20px;
+	padding-right: 20px;
+	border: 1px solid;
+	z-index: 2;
+}
+.Btn
+{
+	float: right;
+	display: block;
+	right: -30px;
+	bottom: -15px;
+	color: white;
+	height: 65px;
+	width: 8vw;
+	min-width: 100px;
+	line-height: 65px;
+	text-align: center;
+	background: rgba(213,68,70,1.00);
+	transition: transform 0.2s ease-in 0.2s;
+}
+.Btn a
+{
+	color: white;
+}
+.Btn:hover
+{
+	transform: scale(1.06, 1.06);
+	opacity: 0.6;
+}
+#sidebar
+{
+	display: block;
+	position: absolute;
+	right: 0;
+	height: auto;			
+	box-shadow: 10px 10px 26px 13px rgba(21,23,25,0.80);
+	z-index: 3;
+}
+#sidebar ul
+{
+	list-style-type: none;
+}
+#sidebar ul a
+{
+	height: 60px;
+	line-height: 30px;
+	display: block;
+	color: white;
+	background: rgba(51,51,51,0.8);
+	opacity: 0.8;
+	text-align: center;
+	padding: 14px 25px;
+}
+#sidebar ul a:hover
+{
+	background: rgba(67,67,67,1.00);
+	opacity: 0.8;
+}
+#main_2
+{
+	position: relative;
+	z-index: 1;
+	width: 100%;
+	height: 600px;
+	box-shadow: 0px 10px 60px 13px rgba(55,49,49,0.71);
+	padding-top: 40px;
+	padding-bottom: 40px;
+	padding-left: 20px;
+	margin-bottom: 70px;
+	background: rgba(255,255,255,1.00);
+}
+#main_2_img
+{
+	position: absolute;
+	left: -300px;
+	margin-right: 50px;
+}
+#main_2_img img
+{
+	width: 30vw;
+	min-width: 370px;
+	max-width: 500px;
+	transition: transform 0.2s ease-in 0.2s;
+}
+#main_2_img img:hover
+{
+	transform: scale(1.1, 1.1);
+}
+#main_2_intro
+{
+	position: absolute;
+	height: auto;
+	width: 45%;
+	padding-left: 20px;
+	padding-bottom: 20px;
+	padding-right: 20px;
+	border: 1px solid;
+	z-index: 2;
+	left: -300px;
+	float: right;
+}
+.Btn1
+{
+	float: right;
+	display: block;
+	right: -30px;
+	bottom: -15px;
+	color: white;
+	height: 65px;
+	width: 7vw;
+	min-width: 100px;
+	line-height: 65px;
+	text-align: center;
+	background: rgba(213,68,70,1.00);
+	transition: transform 0.2s ease-in 0.2s;
+	margin: 0 5px;
+}
+.Btn1 a
+{
+	color: white;
+}
+.Btn1:hover
+{
+	transform: scale(1.06, 1.06);
+	opacity: 0.6;
+}
+#end
+{	
+	margin: 0;
+	color: white;
+	padding-top: 70px;
+	position: relative;
+	width: 100%;
+	height: 200px;
+	text-align: center;
+	background: rgba(213,68,70,1.00);
+}
+.content
+{
+	position: relative;
+	height: auto;
+	margin: 70px auto 100px auto;
+	width: 98%;
+	box-shadow: 10px 10px 26px 13px rgba(21,23,25,0.80);
+	min-width: 850px;
+	padding-bottom: 80px;
+	background: rgba(255,255,255,1.00);
+}
+.hidden
+{
+	display: none;
+	position: relative;
+	height: auto;
+	margin: 70px auto 100px auto;
+	width: 98%;
+	box-shadow: 10px 10px 26px 13px rgba(21,23,25,0.80);
+	min-width: 850px;
+	padding-bottom: 80px;
+	background: rgba(255,255,255,1.00);
+}
+.tab_content
+{
+	height: auto;
+	width: 80%;
+	min-width: 720px;
+	margin-left: 4vw;
+}
+.tab_content ul
+{
+	padding: 0;
+	margin: 0;
+	height: 60px;
+	width: 540px;
+	overflow: hidden;
+}
+.tab_content li
+{
+	margin: 0 auto;
+	width: 130px;
+	height: 50px;
+	float: left;
+	color: white;
+	line-height: 50px;
+	background: rgba(79,79,79,1.00);
+}
+.tab_content a
+{
+	height: 60px;
+	line-height: 30px;
+	display: block;
+	text-align: center;
+	padding: 14px 25px;
+}
+.tab_content li a:hover
+{
+	background: rgba(67,67,67,1.00);
+}
+.anime_info
+{
+	margin: 10px auto;
+	width: 90%;
+	min-width: 850px;
+	background: rgba(241,241,241,1.00);
+	height: 200px;
+	
+	transition: background 0.2s ease-in 0.2s;
+	transition: box-shadow 0.2s ease-in 0.2s;
+}
+.anime_intro
+{
+	float: left;
+	margin-bottom: 10px;
+	overflow: hidden;
+}
+.anime_info a
+{
+	color: rgba(99,99,99,1.00);
+	transition: color 0.2s ease-in 0.2s;
+	overflow: hidden;
+}
+.anime_info a:hover
+{
+	color: rgba(187,187,187,1.00);
+}
+.anime_info:hover
+{
+	background: rgba(255,255,255,1.00);
+	transform: scale(1.05, 1.05);
+	box-shadow: 5px 5px 26px 5px rgba(21,23,25,0.80);
+}
+.anime_info img
+{
+	float: left;
+	margin: 10px 10px;
+	width: 130px;
+ 	transition: filter 0.2s ease-in 0.2s,transform 0.2s ease-in 0.2s;
+	overflow: hidden;
+}
+.anime_info img:hover
+{
+	transform: scale(1.05, 1.05);
+	filter: brightness(0.8);	
+}

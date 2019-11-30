@@ -1,0 +1,210 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>game</title>
+<link rel="stylesheet" href="bootstrap-4.3.1-dist/css/bootstrap.css">
+<link rel="stylesheet" href="css/index.css">
+<link rel="stylesheet" href="css/game.css">
+<script src="js/jquery-3.4.1.min.js"></script>
+<script src="bootstrap-4.3.1-dist/js/bootstrap.js"></script>
+<script src="js/Animation.js"></script>
+<script>
+	window.onscroll = function(){
+		var oDiv = document.getElementById('sidebar');
+		var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+		var target = parseInt((document.documentElement.clientHeight-oDiv.offsetHeight)/2+scrollTop);
+
+		if(scrollTop < 50)
+		{
+			oDiv.style.display = 'none';
+		}
+		else
+		{
+			oDiv.style.display = 'block';
+			startMove(oDiv, {top:target});//侧边栏滑动效果
+		}
+	}
+	var text=new Array(); //定义需要显示的数组
+
+	text[0]="官方游戏";
+	text[1]="同人游戏";
+</script>
+</head>
+
+<body>
+	<div id="account_menu" class="nv" onMouseOver="displayMenu()" onMouseOut="hideMenu()">
+		<ul>
+			<li><a href="index.html">注 册</a></li>
+			<li><a href="login.html">登 入</a></li>
+		</ul>
+		<div id="account_icon">
+		</div>
+		<div id="account_icon_blur">
+		</div>
+		<div id="stat"><a>未 登 入</a></div>
+	</div>
+	<div id="menubar" class="nv">
+	<ul>
+		<li><a href="index.html">首 页</a></li>
+		<li><a href="anime.html">动 画</a></li>
+		<li><a href="comic.html">漫 画</a></li>
+		<li><a href="game.html">游 戏</a></li>
+		<li><a href="">支 持 我 们</a></li>
+		<li class="account"><a  onMouseOver="displayMenu()" onMouseOut="hideMenu()" href="">用 户</a></li>
+	</ul>
+	</div>
+	<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+  		<ol class="carousel-indicators">
+    		<li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+    		<li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+    		<li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+  		</ol>
+  	<div class="carousel-inner">
+    	<div class="carousel-item active">
+      		<center><img src="img/game_carousel_1.jpg" alt="..."></center>
+			<div class="carousel-caption d-none d-md-block">
+          		<h1>幻想乡萃夜祭</h1>
+          		<p>喜欢参加宴会玩乐的酒“鬼” 伊吹翠香</p>
+        	</div>
+    	</div>
+    	<div class="carousel-item">
+    		<center><img src="img/game_carousel_2.jpg" alt="..."></center>
+			<div class="carousel-caption d-none d-md-block">
+          		<h1>东方绀珠传 ～ Legacy of Lunatic Kingdom.</h1>
+          		<p>新增 完美无缺系统 以及迄今最狂气弹幕</p>
+        	</div>
+    	</div>
+    	<div class="carousel-item">
+      		<center><img src="img/game_carousel_3.jpg" alt="..."></center>
+			<div class="carousel-caption d-none d-md-block">
+          		<h1>东方非想天则</h1>
+          		<p>打则奉陪到底</p>
+        	</div>
+    	</div>
+  	</div>
+  	<a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+    	<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    	<span class="sr-only">Previous</span>
+  	</a>
+  	<a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+    	<span class="carousel-control-next-icon" aria-hidden="true"></span>
+    	<span class="sr-only">Next</span>
+  	</a>
+	</div>
+	<div id="sidebar">
+	<ul>
+		<li><a href="index.html">首   页</a></li>
+		<li><a href="anime.html">动   画</a></li>
+		<li><a href="comic.html">漫   画</a></li>
+		<li><a href="game.html">游   戏</a></li>
+		<li onClick="backTop()"><a>回到顶部</a></li>
+	</ul>
+	</div>
+	<div id="content1" class="content">
+		<p class="content_text" style="margin-left: 4vw; font-size: 40px">官方游戏</p>
+		<div class="tab_content">
+			<ul>
+				<li onClick = "show(0)"><a>官方游戏</a></li>
+				<li onClick = "show(1)"><a>同人游戏</a></li>
+			</ul>
+		</div>
+		<ul>
+			<li><div class="anime_info">
+					<img src="img/work/东方红魔乡封面.jpg" alt="...">
+					<div class="anime_intro">
+						<a href="" style="font-size: 30px">东方红魔乡 ～ the Embodiment of Scarlet Devil.</a>
+						<p>发行商:上海爱丽丝幻乐团 发行地:日本<br>简介:东方Project在Windows平台上的第一作（新作第一作），自机为博丽灵梦与雾雨魔理沙。<br>游戏类型:弹幕射击类游戏<br>发行日期:2002年8月11日(Comic Market 62)</p>
+					</div></div></li>
+			<li><div class="anime_info">
+					<img src="img/work/东方妖妖梦封面.jpg" alt="...">
+					<div class="anime_intro">
+						<a href="" style="font-size: 30px">东方妖妖梦 ～ Perfect Cherry Blossom.</a>
+						<p>发行商:上海爱丽丝幻乐团 发行地:日本<br>简介:从本作开始判定点在低速模式下变为可见，特色为森罗结界系统，自机为博丽灵梦、雾雨魔理沙和十六夜咲夜。<br>游戏类型:弹幕射击类游戏<br>发行日期:2003年8月17日（Comic Market 64）</p>
+					</div></div></li>
+			<li><div class="anime_info">
+					<img src="img/work/东方永夜抄封面.jpg" alt="...">
+					<div class="anime_intro">
+						<a href="" style="font-size: 30px">东方永夜抄 ～ Imperishable Night.</a>
+						<p>发行商:上海爱丽丝幻乐团<br>发行地:日本<br>简介:自机为两人一组的四个组合，可在战斗中切换，特色为人妖值系统，4面根据自机不同而不同，6面可选进入不同分支。<br>游戏类型:弹幕射击类游戏<br>发行日期:2004年8月15日（Comic Market 66）</p>
+					</div></div></li>
+			<li><div class="anime_info">
+					<img src="img/work/东方花映塚封面.jpg" alt="...">
+					<div class="anime_intro">
+						<a href="" style="font-size: 30px">东方花映塚 ～ Phantasmagoria of Flower View.</a>
+						<p>发行商:上海爱丽丝幻乐团<br>发行地:日本<br>简介:本作与旧作东方梦时空系统相似，是不同于传统类型的弹幕对战游戏，可以联机。<br>游戏类型:弹幕射击类游戏<br>发行日期:2005年8月14日（Comic Market 68）</p>
+					</div></div></li>
+			<li><div class="anime_info">
+					<img src="img/work/东方风神录封面.jpg" alt="...">
+					<div class="anime_intro">
+						<a href="" style="font-size: 30px">东方风神录 ～ Mountain of Faith.</a>
+						<p>发行商:上海爱丽丝幻乐团<br>发行地:日本<br>简介:从本作开始使用DX9制作。取消了擦弹奖励系统，自机为博丽灵梦、雾雨魔理沙。<br>游戏类型:弹幕射击类游戏<br>发行日期:2007年8月17日（Comic Market 72）</p>
+					</div></div></li>
+			<li><div class="anime_info">
+					<img src="img/work/东方地灵殿封面.jpg" alt="...">
+					<div class="anime_intro">
+						<a href="" style="font-size: 30px">东方地灵殿 ～ Subterranean Animism.</a>
+						<p>发行商:上海爱丽丝幻乐团<br>发行地:日本<br>简介:本作恢复了前作取消的擦弹奖励系统，自机为博丽灵梦、雾雨魔理沙，各有三个不同的地面支援角色。<br>游戏类型:弹幕射击类游戏<br>发行日期:2008年8月16日（Comic Market 74）</p>
+					</div></div></li>
+			<li><div class="anime_info">
+					<img src="img/work/东方星莲船封面.jpg" alt="...">
+					<div class="anime_intro">
+						<a href="" style="font-size: 30px">东方星莲船 ～ Undefined Fantastic Object.</a>
+						<p>发行商:上海爱丽丝幻乐团<br>发行地:日本<br>简介:本作特色为UFO系统，自机为博丽灵梦、雾雨魔理沙和东风谷早苗。<br>游戏类型:弹幕射击类游戏<br>发行日期:2011年8月13日（Comic Market 80）</p>
+					</div></div></li>
+			<li><div class="anime_info">
+					<img src="img/work/东方神灵庙封面.jpg" alt="...">
+					<div class="anime_intro">
+						<a href="" style="font-size: 30px">东方神灵庙 ～ Ten Desires.</a>
+						<p>发行商:上海爱丽丝幻乐团<br>发行地:日本<br>简介:本作特色为神灵系统及灵界模式，自机为博丽灵梦、雾雨魔理沙、东风谷早苗和魂魄妖梦。<br>游戏类型:弹幕射击类游戏<br>发行日期:2011年8月13日（Comic Market 80）</p>
+					</div></div></li>
+			<li><div class="anime_info">
+					<img src="img/work/东方辉针城封面.jpg" alt="...">
+					<div class="anime_intro">
+						<a href="" style="font-size: 30px">东方辉针城 ～ Double Dealing Character.</a>
+						<p>发行商:上海爱丽丝幻乐团<br>发行地:日本<br>简介:本作以“既不创新亦不怀旧，Zero年代新复古弹幕STG”为主题，自机为博丽灵梦、雾雨魔理沙和十六夜咲夜。<br>游戏类型:弹幕射击类游戏<br>发行日期:2013年8月12日（Comic Market 84）</p>
+					</div></div></li>
+			<li><div class="anime_info">
+					<img src="img/work/东方绀珠传封面.jpg" alt="...">
+					<div class="anime_intro">
+						<a href="" style="font-size: 30px">东方绀珠传 ～ Legacy of Lunatic Kingdom.</a>
+						<p>发行商:上海爱丽丝幻乐团<br>发行地:日本<br>简介:本作可选择新的游戏模式“完美无缺模式”，自机为博丽灵梦、雾雨魔理沙、东风谷早苗和铃仙·优昙华院·因幡。<br>游戏类型:弹幕射击类游戏<br>发行日期:2015年8月14日（Comic Market 88）</p>
+					</div></div></li>
+			<li><div class="anime_info">
+					<img src="img/work/东方天空璋封面.jpg" alt="...">
+					<div class="anime_intro">
+						<a href="" style="font-size: 30px">东方天空璋 ～ Hidden Star in Four Seasons.</a>
+						<p>发行商:上海爱丽丝幻乐团<br>发行地:日本<br>简介:本作特色为季节解放系统，自机为博丽灵梦、雾雨魔理沙、琪露诺和射命丸文。<br>游戏类型:弹幕射击类游戏<br>发行日期:2017年8月11日（Comic Market 92）</p>
+					</div></div></li>
+			<li><div class="anime_info">
+					<img src="img/work/东方鬼形兽封面.jpg" alt="...">
+					<div class="anime_intro">
+						<a href="" style="font-size: 30px">东方鬼形兽 ～ Wily Beast and Weakest Creature.</a>
+						<p>发行商:上海爱丽丝幻乐团<br>发行地:日本<br>简介:本作特色为动物灵系统，自机为博丽灵梦、雾雨魔理沙和魂魄妖梦。本作保留了小数作的成就系统。<br>游戏类型:弹幕射击类游戏<br>发行日期:2019年8月12日（Comic Market 96）</p>
+					</div></div></li>
+		</ul>
+	</div>
+	<div id="content2" class="hidden">
+		<p class="content_text" style="margin-left: 4vw; font-size: 40px">同人游戏</p>
+		<div class="tab_content">
+			<ul>
+				<li onClick = "show(0)"><a>官方游戏</a></li>
+				<li onClick = "show(1)"><a>同人游戏</a></li>
+			</ul>
+		</div>
+		<ul>
+			<li><div class="anime_info">
+					<img src="img/work/幻想郷萃夜祭封面.jpg" alt="...">
+					<div class="anime_intro">
+						<a href="" style="font-size: 30px">幻想乡萃夜祭</a>
+						<p>发行商:	Vaka Game Magazine，tea basira<br>发行地:日本<br>简介:制作优良,画面精美的像素游戏<br>游戏类型:像素横版过关类游戏<br>发行日期:2019年10月14日</p>
+					</div></div></li>
+		</ul>
+	</div>
+	<div id="content3" class="hidden"></div>
+	<div id="content4" class="hidden"></div>
+	<div id="end">
+		<p>Powered By DarckLH<br>rmdarck18@gmail.com<br>From 2019</p>
+	</div>
+</body>
+</html>
